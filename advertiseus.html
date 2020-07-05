@@ -236,5 +236,71 @@
 <script src="js2/rev-slider/revolution.extension.parallax.min.js"></script>
 <script src="js2/rev-slider/revolution.extension.slideanims.min.js"></script>
 <script src="js2/rev-slider/revolution.extension.video.min.js"></script>
+  <script>
+  if (typeof $.fn.revolution !== 'undefined') {
+      
+      $("#rev_slider").revolution({
+        sliderType:"standard",
+        sliderLayout:"fullscreen",
+        dottedOverlay:"none",
+        delay:7000,
+        navigation: {
+          keyboardNavigation:"off",
+          keyboard_direction: "horizontal",
+          onHoverStop:"off",
+          touch:{
+            touchenabled:"on",
+            swipe_threshold: 75,
+            swipe_min_touches: 1,
+            swipe_direction: "horizontal",
+            drag_block_vertical: false
+          },
+          bullets: {
+            enable:true,
+            hide_onmobile:true,
+            hide_under:767,
+            style:"custom",
+            hide_onmobile: true,
+            hide_onleave: true,
+            direction:"horizontal",
+            h_align:"center",
+            v_align:"bottom",
+            h_offset:0,
+            v_offset:40,
+            space:8,
+            tmp:'<span class="tp-bullet-inner"></span>'
+          }
+        },
+        viewPort: {
+          enable:true,
+          outof:"pause",
+          visible_area:"80%"
+        },
+        responsiveLevels:[1240,1024,778,480],
+        gridwidth:[800],
+        gridheight:[600],
+        lazyType:"none",
+        shadow:0,
+        spinner:"off",
+        stopLoop:"on",
+        stopAfterLoops:0,
+        shuffle:"off",
+        autoHeight:"off",
+        fullScreenAlignForce:"off",
+        fullScreenOffsetContainer: "",
+        fullScreenOffset: "",
+        disableProgressBar:"on",
+        hideThumbsOnMobile:"off",
+        hideSliderAtLimit:0,
+        hideCaptionAtLimit:0,
+        hideAllCaptionAtLilmit:0,
+        debugMode:false,
+        fallbacks: {
+          simplifyAll:"off",
+          nextSlideOnWindowFocus:"off",
+          disableFocusListener:false,
+        }
+      });
+    }
   </body>
 </html>
